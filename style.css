@@ -1,0 +1,658 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.cart {
+  position: sticky;
+  background: rgb(165, 137, 152);
+  width: 100%;
+  height: 50%;
+  box-shadow: 0 2px 8px rgba(2, 71, 92, 0.1);
+  margin: 0 auto;
+}
+
+.cart-total {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.cart h2 {
+  margin: 10px;
+}
+
+.cart p {
+  margin: 10px;
+}
+
+.cart-items li {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart .checkout {
+  background-color: #4caf50;
+  color: pink;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.remove-button {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 5px;
+  background-color: #5900ff;
+  color: #0e0b0b;
+  font-size: 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: #ff0019;
+}
+
+.add-to-cart-btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+}
+
+.add-to-cart-btn {
+  color: #fff;
+  background: #16a083;
+}
+
+.add-to-cart-btn:hover {
+  background: #7ae6d0;
+  transition: background 0.3s ease-in-out;
+}
+
+.Checkout {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+  margin: 10px;
+}
+
+.Checkout {
+  color: pink;
+  background: #16a083;
+}
+
+.Checkout:hover {
+  background: #117964;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Styles for the overlay and checkout form */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-form {
+  background-color: pink;
+  padding: 20px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.checkout-form h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.checkout-form form {
+  margin-top: 20px;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.checkout-form .payment-options {
+  margin-bottom: 10px;
+}
+
+.checkout-form .payment-options input[type="radio"] {
+  margin-right: 5px;
+}
+
+.checkout-form .button-group {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.checkout-form button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.checkout-form .cancel {
+  background-color: #ccc;
+}
+
+
+.html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.section-m1 {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+
+#products .pro-container{
+    margin-right: 30px;
+}
+
+#products .pro {
+  width: 23%;
+  min-width: 300px;
+  padding: 10px 12px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.02);
+  transition: transform 0.3s;
+}
+
+#products .pro:hover {
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.6);
+  transform: scale(1.03);
+}
+
+#products .pro img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#products .pro .des {
+  text-align: start;
+  padding: 10px 0;
+}
+
+
+#products .pro .des span {
+  color: #000;
+  font-size: 30px;
+}
+
+
+#products .product .Prod2 {
+  text-align: start;
+  padding: 10px 0;
+}
+
+
+ .button{
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: powderblue;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+ }
+
+
+
+
+
+
+
+
+.container {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-primary {
+  color: #fff;
+  background: #16a083;
+}
+
+.btn-primary:hover {
+  background: #117964;
+  transition: background 0.3s ease-in-out;
+}
+
+
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.navbar {
+  box-shadow: 0px 5px 10px 0px #bb3838;
+  position: flex;
+  width: 100%;
+  background:Pink;
+  color:#000;
+  opacity: 0.85;
+  height: 50px;
+  z-index: 12;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  color: #117964;
+  transition: color 0.3s;
+}
+
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.showcase-area {
+  height: 50vh;
+  background: hsl(332, 30%, 68%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.8rem;
+}
+
+.main-title {
+  text-transform: uppercase;
+  margin-top: 1.5em;
+}
+
+.product_header {
+  height: 20vh;
+  background: hsl(332, 30%, 68%);
+  background-size: cover;
+}
+
+.product_header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.8rem;
+}
+
+.header_title {
+  text-transform: uppercase;
+}
+
+.contact_header {
+  height: 20vh;
+  background: hsl(332, 30%, 68%);
+  background-size: cover;
+}
+
+.contact_header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.8rem;
+}
+
+.header_title {
+  text-transform: uppercase;
+}
+
+#about {
+  padding: 50px 0;
+  background: #FFDAC1;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about h2 {
+  font-size: 2.3rem;
+}
+
+#about p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#about .uppercase {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 600;
+}
+
+
+@keyframes about-img-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+  transform: translate(-150%);
+  animation: about-text-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-img img{
+  display: block;
+  height: 400px;
+  max-width: 100%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.add-to-cart {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#total {
+  font-weight: bold;
+}
+
+.checkout {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+#cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#total {
+  font-weight: bold;
+}
+
+.img-content h3 {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.img-content a {
+  font-size: 1.2rem;
+}
+
+.img-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.871);
+  opacity: 0;
+  z-index: 1;
+
+  transform: scaleY(0);
+  transform-origin: 100% 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.img-container:hover::after {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.img-container:hover .img-content {
+  opacity: 1;
+  top: 40%;
+}
+
+
+
+/* ........ Contact Us........... */
+
+#contact {
+  padding: 5rem 0;
+  background: rgb(226, 226, 226);
+}
+
+.contact-container {
+  display: center;
+  background: #CCE2CB;
+  justify-content: center;
+}
+
+.contact-img {
+  width: 100%;
+}
+
+.contact-img img {
+  display: block;
+  height: 400px;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.form-container {
+  padding: 1rem;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  padding: 1rem 0;
+  box-shadow: none;
+  outline: none;
+  margin-bottom: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.form-container textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  color: #444;
+  outline: none;
+  padding: 1rem 0;
+  resize: none;
+}
+
+.form-container h2 {
+  font-size: 2.7rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 1rem;
+  margin-top: -1.2rem;
+}
+
+.form-container a {
+  font-size: 1.3rem;
+}
+
+#footer h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 2.6rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgb(65, 65, 65);
+}
+footer {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
